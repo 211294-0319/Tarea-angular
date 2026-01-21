@@ -1,7 +1,9 @@
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <!-- El metodo onSubmit fue explicado por copilot sobre como conectarlo con el typescript del metodo onSubmit -->
   <div class="label">
     <label for="title">Título:</label>
     <input id="title" type="text" formControlName="title" />
+    <!-- Este codigo fue explicado por copilot para mostrar mensajes de error cuando con invalidos los inputs -->
     <div
       *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched"
       style="color: red"

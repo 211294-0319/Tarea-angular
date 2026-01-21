@@ -18,6 +18,7 @@ export class FormComponent {
   });
 
   onSubmit() {
+    // Copilot me explico como utilizar los metodos definidos por ReactiveForms para los inputs que se validaran y enviaran en el JSON
     if (this.productForm.valid) {
       const formData = this.productForm.value;
       const productData = {
@@ -25,9 +26,11 @@ export class FormComponent {
         price: Number(formData.price),
         description: formData.description || '',
         categoryId: Number(formData.categoryId),
-        images: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],
+        images: [
+          'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        ],
       };
-
+      // Copilot me explico como consumir por medio de fecth la API de escuela JS
       fetch('https://api.escuelajs.co/api/v1/products', {
         method: 'POST',
         headers: {
